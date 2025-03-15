@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: ubuntu-latest
+  name: Hosted Agent
 
 steps:
 - task: Maven@3
