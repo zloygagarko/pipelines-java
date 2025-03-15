@@ -1,0 +1,27 @@
+name: Scenario2_$(Date:yyyyMMdd)$(Rev:.r)
+trigger:
+ - Main
+jobs:
+ - job: ActivityonWindows
+   pool:
+    name: default
+   steps:
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          # Write your PowerShell commands here.
+      
+          Write-Host "Hello World"
+
+ - job: ActivityonLinux
+   pool:
+    name: default
+   steps:
+    - - task: CmdLine@2
+        inputs:
+          script: |
+            echo Write your commands here
+      
+            echo Hello world
+
