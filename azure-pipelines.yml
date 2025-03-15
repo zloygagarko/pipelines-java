@@ -7,11 +7,8 @@ trigger:
 - main
 
 pool:
-  name: Default
-  demands:
-    - maven
-    - Agent.Version -gtVersion 2.163.1
-
+  vmimage: 'ubuntu-latest'
+  
 steps:
 - task: Maven@3
   inputs:
