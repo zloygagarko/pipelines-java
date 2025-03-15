@@ -1,10 +1,10 @@
 name: Scenario2_$(Date:yyyyMMdd)$(Rev:.r)
 trigger:
- - Main
+ - main
 jobs:
  - job: ActivityonWindows
    pool:
-    name: default
+      vmImage: 'windows-latest'
    steps:
     - task: PowerShell@2
       inputs:
@@ -16,7 +16,7 @@ jobs:
 
  - job: ActivityonLinux 
    pool:
-    name: default
+      vmImage: 'ubuntu-latest'
    steps:
     - task: CmdLine@2
       inputs:
