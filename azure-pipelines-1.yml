@@ -18,10 +18,10 @@ jobs:
    pool:
     name: default
    steps:
-    - - task: CmdLine@2
-        inputs:
-          script: |
-            echo Write your commands here
+    - task: CmdLine@2
+      inputs:
+        script: |
+          echo Write your commands here
       
-            echo Hello world
+          echo Hello world
 
