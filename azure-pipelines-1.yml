@@ -1,27 +1,27 @@
-name: Scenario2_$(Date:yyyyMMdd)$(Rev:.r)
-trigger:
- - main
-jobs:
- - job: ActivityonWindows
-   pool:
-      vmImage: 'windows-latest'
-   steps:
-    - task: PowerShell@2
-      inputs:
-        targetType: 'inline'
-        script: |
-          # Write your PowerShell commands here.
+# name: Scenario2_$(Date:yyyyMMdd)$(Rev:.r)
+# trigger:
+#  - main
+# jobs:
+#  - job: ActivityonWindows
+#    pool:
+#       vmImage: 'windows-latest'
+#    steps:
+#     - task: PowerShell@2
+#       inputs:
+#         targetType: 'inline'
+#         script: |
+#           # Write your PowerShell commands here.
       
-          Write-Host "Hello World"
+#           Write-Host "Hello World"
 
- - job: ActivityonLinux 
-   pool:
-      vmImage: 'ubuntu-latest'
-   steps:
-    - task: CmdLine@2
-      inputs:
-        script: |
-          echo Write your commands here
+#  - job: ActivityonLinux 
+#    pool:
+#       vmImage: 'ubuntu-latest'
+#    steps:
+#     - task: CmdLine@2
+#       inputs:
+#         script: |
+#           echo Write your commands here
       
-          echo Hello world
+#           echo Hello world
 
